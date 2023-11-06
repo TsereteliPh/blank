@@ -1,16 +1,17 @@
 :root {
 	// FONTS
 	--font-primary: "Manrope", "Arial", sans-serif;
-	--font-secondary: "FiraSans", "Arial", sans-serif;
+	--font-secondary: "Tektur", "Arial", sans-serif;
 
 	//COLORS
-	--primary: #1e5fbf;
-	--secondary: #ffb342;
+	--primary: #26a2ef;
+	--primary-rgb: (38, 162, 239);
 
-	--fc-dark: #4b4b4b;
+	--fc-dark: #000;
 	--fc-light: #fff;
 
-	--bg-primary: #c9e1f5;
+	--bg-light: #f5f5f6;
+	--bg-dark: #000;
 
 	//Transition
 	--transition: all 0.3s ease;

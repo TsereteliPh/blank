@@ -1,9 +1,69 @@
 @font-face {
 	font-weight: 300;
-	font-family: "Cormorant Unicase";
+	font-family: Manrope;
 	font-style: normal;
 	src:
-		url(assets/fonts/CormorantUnicase-Light.woff2) format("woff2"),
-		url(assets/fonts/CormorantUnicase-Light.woff) format("woff");
+		url(assets/fonts/Manrope-Light.woff2) format("woff2"),
+		url(assets/fonts/Manrope-Light.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 400;
+	font-family: Manrope;
+	font-style: normal;
+	src:
+		url(assets/fonts/Manrope-Regular.woff2) format("woff2"),
+		url(assets/fonts/Manrope-Regular.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: Manrope;
+	font-style: normal;
+	src:
+		url(assets/fonts/Manrope-Bold.woff2) format("woff2"),
+		url(assets/fonts/Manrope-Bold.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 800;
+	font-family: Manrope;
+	font-style: normal;
+	src:
+		url(assets/fonts/Manrope-ExtraBold.woff2) format("woff2"),
+		url(assets/fonts/Manrope-ExtraBold.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 400;
+	font-family: Tektur;
+	font-style: normal;
+	src:
+		url(assets/fonts/Tektur-Regular.woff2) format("woff2"),
+		url(assets/fonts/Tektur-Regular.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 500;
+	font-family: Tektur;
+	font-style: normal;
+	src:
+		url(assets/fonts/Tektur-Medium.woff2) format("woff2"),
+		url(assets/fonts/Tektur-Medium.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: Tektur;
+	font-style: normal;
+	src:
+		url(assets/fonts/Tektur-Bold.woff2) format("woff2"),
+		url(assets/fonts/Tektur-Bold.woff) format("woff");
 	font-display: swap;
 }
