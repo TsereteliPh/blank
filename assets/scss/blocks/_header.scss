@@ -1,0 +1,231 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	&__container {
+		margin-top: 40px;
+		padding: 10px 20px;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		border-radius: 10px;
+
+		@include to(1750px) {
+			margin-top: 20px;
+		}
+
+		@include md {
+            margin-top: 10px;
+			padding: 10px;
+        }
+
+		@include xs {
+			padding: 5px 0;
+		}
+	}
+
+	&__panel {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+
+		@include xs {
+			justify-content: space-between;
+		}
+	}
+
+	&__burger {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		padding: 0;
+		overflow: hidden;
+		background: var(--primary);
+		border: none;
+		border-radius: 50%;
+
+		&:hover {
+
+			span {
+
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+
+		&.active {
+
+			span {
+				background: transparent;
+
+				&::before {
+					top: 0;
+					transform: rotateZ(-45deg);
+					transition: top 0.25s, transform 0.25s 0.25s;
+				}
+
+				&::after {
+					top: 0;
+					width: 100%;
+					transform: rotateZ(45deg);
+					transition: top 0.4s, transform 0.25s 0.25s;
+				}
+			}
+		}
+
+		span {
+			position: relative;
+			display: block;
+			width: 17px;
+			height: 1.5px;
+			background-color: var(--fc-light);
+			transition: background 0.2s ease;
+			pointer-events: none;
+
+			&::before,
+			&::after {
+				position: absolute;
+				left: 0;
+				height: 1.5px;
+				background-color: var(--fc-light);
+				content: "";
+			}
+
+			&::before {
+				top: -5px;
+				width: 100%;
+				transition: transform 0.25s, top 0.25s 0.25s;
+				transition-duration: 0.25s;
+			}
+
+			&::after {
+				top: 5px;
+				width: 60%;
+				transition: width 0.25s, transform 0.25s, top 0.25s .25s;
+				transition-duration: 0.25s;
+
+				@include xs {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__logo {
+		display: block;
+		margin-left: 5px;
+
+		@include xs {
+			margin-left: 0;
+			order: -1;
+		}
+
+		svg {
+			@include sm {
+				width: 200px;
+				height: auto;
+			}
+
+			@include xs {
+				width: 240px;
+			}
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+		align-items: center;
+		justify-content: space-between;
+		width: 730px;
+		margin-left: auto;
+
+		@include lg {
+			display: none;
+		}
+
+		.menu-item {
+
+			> a {
+				display: block;
+				text-decoration: none;
+				transition: var(--transition);
+
+				@include mouse {
+
+					&:hover {
+						color: var(--primary);
+					}
+
+					&:active {
+						opacity: 0.8;
+					}
+				}
+			}
+		}
+
+        .current-menu-item {
+
+            > a {
+                font-weight: 700;
+                color: var(--primary);
+                cursor: default;
+
+				@include mouse {
+
+					&:hover,
+					&:active {
+						color: var(--primary);
+					}
+				}
+            }
+        }
+	}
+
+	&__phone {
+		flex-shrink: 0;
+		margin-left: auto;
+		font-size: 24px;
+		font-family: var(--font-secondary);
+		@include ui-link(var(--fc-dark));
+
+		@include hg {
+			display: none;
+		}
+
+		@include lg {
+			display: block;
+		}
+
+		@include md {
+			display: none;
+		}
+	}
+
+	&__call {
+		width: fit-content;
+		min-width: 180px;
+
+		@include hg {
+			margin-left: auto;
+		}
+
+		@include lg {
+			margin-left: 0;
+		}
+
+		@include md {
+			margin-left: auto;
+		}
+
+		@include xs {
+			display: none;
+		}
+	}
+}
