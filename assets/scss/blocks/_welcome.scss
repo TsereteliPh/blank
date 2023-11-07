@@ -1,0 +1,110 @@
+.welcome {
+	min-height: 870px;
+	background: url(assets/images/welcome-bg.jpg) no-repeat 50% top / cover;
+
+	@include md {
+		min-height: auto;
+		background: url(assets/images/welcome-bg--tablet.jpg) no-repeat 50% top / 950px auto;
+	}
+
+	@include xs {
+		background-position: 50% 40%;
+		background-size: 520px auto;
+	}
+
+	&__container {
+		min-height: 600px;
+
+		@include md {
+			min-height: 1100px;
+		}
+
+		@include xs {
+			min-height: 650px;
+		}
+	}
+
+	&__text {
+		padding: 140px 0 0 90px;
+		font-size: 24px;
+		font-family: var(--font-secondary);
+		line-height: 1.3;
+
+		@include to(1750px) {
+			padding-left: 0;
+		}
+
+		@include md {
+			padding: 80px 0 0;
+		}
+
+		@include xs {
+			max-width: 200px;
+			padding: 40px 0 0;
+			font-size: 20px;
+		}
+
+		span {
+			display: block;
+			color: var(--primary);
+		}
+	}
+
+	&__link {
+		position: absolute;
+		top: 480px;
+		left: calc(50% - 430px);
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		font-weight: 700;
+		text-decoration: none;
+
+		@include md {
+			top: auto;
+			bottom: 55px;
+			left: 50%;
+			justify-content: center;
+			width: 100%;
+			transform: translateX(-50%);
+		}
+
+		@include mouse {
+
+			&:hover {
+				text-decoration: underline;
+
+				.welcome__btn {
+					transform: scale(1.04);
+				}
+			}
+		}
+	}
+
+	&__btn {
+		position: relative;
+		display: block;
+		flex-shrink: 0;
+		width: 140px;
+		height: 140px;
+		background: rgba(var(--primary-rgb), 0.8);
+		border: none;
+		border-radius: 50%;
+		backdrop-filter: blur(10px);
+		transition: var(--transition);
+
+		@include sm {
+			width: 90px;
+			height: 90px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 52%;
+			transform: translate(-50%, -50%);
+			content: "";
+			@include ui-triangle(to right, 25px, 30px, #fff);
+		}
+	}
+}

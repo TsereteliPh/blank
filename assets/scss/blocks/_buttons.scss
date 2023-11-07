@@ -14,13 +14,13 @@
 	@include mouse {
 
 		&:hover {
-			transform: translateY(-3px);
 			box-shadow: 0 3px 10px rgba(#000, 0.3);
+			transform: translateY(-3px);
 		}
 
 		&:active {
+			box-shadow: none;
 			transform: none;
-            box-shadow: none;
 		}
 	}
 }

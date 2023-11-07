@@ -1,7 +1,7 @@
 .footer {
-    padding: 65px 0 60px;
-    background: var(--bg-dark) url(assets/images/lines-bg.jpg) no-repeat 50% 75% / cover;
+	padding: 65px 0 60px;
 	color: var(--fc-light);
+	background: var(--bg-dark) url(assets/images/lines-bg.jpg) no-repeat 50% 75% / cover;
 
 	&__info {
 		display: flex;
@@ -65,8 +65,8 @@
 
 	&__contacts {
 		display: flex;
-		flex-shrink: 0;
 		flex-direction: column;
+		flex-shrink: 0;
 		gap: 15px;
 
 		@include sm {
@@ -92,19 +92,19 @@
 	}
 
 	&__email {
-		@include ui-link(#0c7dc3);
+		@include ui-link(var(--primary));
 	}
 
 	&__img {
 		width: 100%;
 		max-width: 560px;
 		height: auto;
-		aspect-ratio: 8/3;
 		object-fit: cover;
+		aspect-ratio: 8/3;
 
 		@include hg {
-            width: 40%;
-        }
+			width: 40%;
+		}
 
 		@include sm {
 			grid-column: span 2;
@@ -192,32 +192,32 @@
 		.menu-item {
 
 			> a {
-                display: block;
+				display: block;
 				color: #ababac;
 				font-weight: 300;
 				font-size: 14px;
-                text-decoration: none;
-                transition: var(--transition);
+				text-decoration: none;
+				transition: var(--transition);
 
-                @include mouse {
+				@include mouse {
 
-                    &:hover {
-                        color: var(--fc-light);
-                    }
+					&:hover {
+						color: var(--fc-light);
+					}
 
-                    &:active {
-                        opacity: 0.8;
-                    }
-                }
-            }
+					&:active {
+						opacity: 0.8;
+					}
+				}
+			}
 		}
 
-        .current-menu-item {
+		.current-menu-item {
 
-            > a {
-                font-weight: 700;
-                color: var(--fc-light);
-                cursor: default;
+			> a {
+				color: var(--fc-light);
+				font-weight: 700;
+				cursor: default;
 
 				@include mouse {
 
@@ -226,8 +226,8 @@
 						color: var(--fc-light);
 					}
 				}
-            }
-        }
+			}
+		}
 	}
 
 	&__mailing {
@@ -318,8 +318,8 @@
 
 		@include xs {
 			flex-direction: column;
-			align-items: center;
 			gap: 60px;
+			align-items: center;
 		}
 	}
 

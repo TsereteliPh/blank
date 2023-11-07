@@ -5,22 +5,30 @@
 	z-index: var(--ui-index-3);
 	width: 100%;
 
+	&.scroll {
+
+		.header__container {
+			background-color: rgba(var(--bg-light-rgb), 0.3);
+			backdrop-filter: blur(5px);
+		}
+	}
+
 	&__container {
 		margin-top: 40px;
 		padding: 10px 20px;
-		background-color: var(--bg-light);
 		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 		border-radius: 10px;
+		transition: var(--transition);
 
 		@include to(1750px) {
 			margin-top: 20px;
 		}
 
 		@include md {
-            margin-top: 10px;
+			margin-top: 10px;
 			padding: 10px;
-        }
+		}
 
 		@include xs {
 			padding: 5px 0;
@@ -123,8 +131,8 @@
 		margin-left: 5px;
 
 		@include xs {
-			margin-left: 0;
 			order: -1;
+			margin-left: 0;
 		}
 
 		svg {
@@ -172,12 +180,12 @@
 			}
 		}
 
-        .current-menu-item {
+		.current-menu-item {
 
-            > a {
-                font-weight: 700;
-                color: var(--primary);
-                cursor: default;
+			> a {
+				color: var(--primary);
+				font-weight: 700;
+				cursor: default;
 
 				@include mouse {
 
@@ -186,8 +194,8 @@
 						color: var(--primary);
 					}
 				}
-            }
-        }
+			}
+		}
 	}
 
 	&__phone {

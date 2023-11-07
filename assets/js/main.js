@@ -35,7 +35,7 @@ function setHeaderScrollClass() {
 	const header = document.querySelector(".header");
 
 	window.addEventListener("scroll", function () {
-		if (window.scrollY >= header.offsetHeight) {
+		if (window.scrollY) {
 			header.classList.add("scroll");
 		} else {
 			header.classList.remove("scroll");
