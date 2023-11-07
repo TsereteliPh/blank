@@ -2,11 +2,13 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: var(--ui-index-3);
 	width: 100%;
 
 	&__container {
 		margin-top: 40px;
 		padding: 10px 20px;
+		background-color: var(--bg-light);
 		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 		border-radius: 10px;

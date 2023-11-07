@@ -1,0 +1,30 @@
+.socials {
+	display: flex;
+	gap: 70px;
+	align-items: center;
+
+	@include md {
+		gap: 45px;
+	}
+
+	&__link {
+		display: block;
+		width: fit-content;
+		height: fit-content;
+
+		@include mouse {
+
+			&:hover {
+
+				svg {
+					color: var(--primary);
+				}
+			}
+		}
+
+		svg {
+			color: inherit;
+			transition: var(--transition);
+		}
+	}
+}
