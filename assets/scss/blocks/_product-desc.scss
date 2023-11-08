@@ -4,29 +4,29 @@
 	overflow: hidden;
 	color: var(--fc-light);
 	background:
-		url(assets/images/product-desc-bg.png) no-repeat calc(50% + 300px) 20px / 1300px auto,
+		url(assets/images/product-desc-bg.png) no-repeat calc(50% + 460px) 20px / 1800px auto,
 		linear-gradient(to bottom, var(--bg-light) 0%, var(--bg-light) 130px, var(--bg-dark) 130px, var(--bg-dark) 100%) no-repeat;
 
 	@include hg {
 		margin-top: 60px;
 		background-position:
-			calc(50% + 350px) 60px,
+			calc(50% + 400px) 60px,
 			0 0;
 		background-size:
-			1000px auto,
+			1300px auto,
 			100%;
 	}
 
 	@include sm {
-		padding: 55px 0 560px;
-		background: var(--bg-dark) url(assets/images/product-desc-bg.png) no-repeat right bottom / 750px auto;
+		padding: 55px 0 460px;
+		background: var(--bg-dark) url(assets/images/product-desc-bg.png) no-repeat 50% bottom / 850px auto;
 	}
 
 	@include xs {
 		margin-top: 30px;
 		padding: 50px 0;
-		background-position: 80% 130px;
-		background-size: 600px auto;
+		background-position: 50% 130px;
+		// background-size: 700px auto;
 	}
 
 	&__wrapper {
