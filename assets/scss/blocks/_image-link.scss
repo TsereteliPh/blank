@@ -1,0 +1,83 @@
+.image-link {
+	padding: 40px 0;
+	background: url(assets/images/image-link-bg.jpg) no-repeat calc(50% + 530px) 80% / 1500px auto;
+
+	@include hg {
+		background-position: calc(50% + 600px) 80%;
+	}
+
+	@include lg {
+		background-position: calc(50% + 650px) 80%;
+	}
+
+	@include md {
+		padding-top: 400px;
+		background-position: 50% top;
+		background-size: 1150px auto;
+	}
+
+	@include sm {
+		padding-top: 320px;
+		background-size: 900px auto;
+	}
+
+	@include xs {
+		padding-top: 230px;
+		background-size: 600px auto;
+	}
+
+	&__wrapper {
+		max-width: 750px;
+
+		@include lg {
+			max-width: 650px;
+		}
+
+		@include md {
+			max-width: none;
+		}
+	}
+
+	&__title {
+		max-width: 420px;
+
+		@include md {
+			max-width: none;
+		}
+	}
+
+	&__text {
+		margin-top: 60px;
+		line-height: 1.35;
+		text-indent: 70px;
+
+		@include hg {
+			margin-top: 45px;
+		}
+
+		@include md {
+			text-indent: 50px;
+		}
+
+		@include sm {
+			margin-top: 30px;
+			text-indent: 30px;
+		}
+
+		@include xs {
+			text-indent: 0;
+		}
+	}
+
+	&__link {
+		margin-top: 45px;
+
+		@include sm {
+			margin-top: 30px;
+		}
+
+		@include xs {
+			margin: 30px auto 0;
+		}
+	}
+}

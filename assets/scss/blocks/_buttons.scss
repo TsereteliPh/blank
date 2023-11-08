@@ -24,3 +24,50 @@
 		}
 	}
 }
+
+.btn-arrow {
+	display: flex;
+	gap: 140px;
+	align-items: center;
+	width: fit-content;
+	padding: 30px 35px;
+	font-weight: 700;
+	font-family: var(--font-secondary);
+	text-transform: uppercase;
+	text-decoration: none;
+	border: none;
+	border-top: 1px solid var(--fc-dark);
+	border-bottom: 1px solid var(--fc-dark);
+	border-radius: 10px;
+	transition: var(--transition);
+
+	@include sm {
+		padding: 25px 20px;
+	}
+
+	@include xs {
+		gap: 40px;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 330px;
+	}
+
+	@include mouse {
+
+		&:hover {
+			border-color: var(--primary);
+
+			svg {
+				rotate: 45deg;
+			}
+		}
+
+		&:active {
+			opacity: 0.8;
+		}
+	}
+
+	svg {
+		transition: var(--transition);
+	}
+}
