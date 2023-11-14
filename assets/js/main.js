@@ -319,3 +319,30 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		})
 	}
 })
+
+//Функционал блока .application
+
+const application = document.querySelector('.application');
+
+if (application) {
+	const applicationBtns = application.querySelectorAll('.application__button');
+
+	const applicationBtnsClose = () => {
+		for (let btn of applicationBtns) {
+			btn.classList.remove('active');
+			btn.nextElementSibling.style.maxHeight = 0;
+		}
+	}
+
+	applicationBtns.forEach(btn => {
+		btn.addEventListener('click', function() {
+			if (this.classList.contains('active')) {
+				applicationBtnsClose();
+			} else {
+				applicationBtnsClose();
+				this.classList.add('active');
+				slideToggle(this.nextElementSibling);
+			}
+		})
+	});
+}

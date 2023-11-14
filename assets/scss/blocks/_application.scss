@@ -1,0 +1,146 @@
+.application {
+	margin-top: 15px;
+	padding-bottom: 120px;
+	background: url(assets/images/application-bg.jpg) no-repeat calc(50% + 450px) top / auto min(750px, 95%);
+
+	@include md {
+		padding-bottom: 580px;
+		background-position: 50% bottom;
+		background-size: 800px auto;
+	}
+
+	@include xs {
+		padding-bottom: 90vw;
+		background-position: 50% 90%;
+		background-size: 100% auto;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		max-width: 750px;
+		margin-top: 65px;
+		counter-reset: application-number 0;
+
+		@include md {
+			max-width: none;
+		}
+
+		@include xs {
+			margin-top: 50px;
+		}
+	}
+
+	&__item {
+		transition: var(--transition);
+	}
+
+	&__button {
+		position: relative;
+		display: flex;
+		gap: 15px;
+		align-items: center;
+		padding: 15px 0 0 40px;
+		color: #8e8e8e;
+		font-weight: 700;
+		font-size: 24px;
+		text-align: left;
+		background: none;
+		border: none;
+		counter-increment: application-number 1;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		-webkit-tap-highlight-color: transparent;
+
+		@include xs {
+			padding: 5px 0 0 30px;
+			font-size: 20px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #8e8e8e;
+			font-size: 14px;
+			font-family: var(--font-secondary);
+			text-transform: uppercase;
+			content: counter(application-number, decimal-leading-zero);
+		}
+
+		&--icon {
+
+			&.active {
+				padding: 0;
+
+				&::before {
+					display: none;
+				}
+
+				.application__icon {
+					display: block;
+					animation: icon-show 0.2s ease;
+				}
+
+				+ .application__text {
+					text-indent: 70px;
+				}
+			}
+		}
+
+		&.active {
+			color: var(--primary);
+
+			+ .application__text {
+				margin-top: 25px;
+
+				@include xs {
+					margin-top: 14px;
+				}
+			}
+		}
+
+
+	}
+
+	&__icon {
+		display: none;
+		width: 50px;
+		height: 50px;
+		object-fit: cover;
+	}
+
+	&__text {
+		max-height: 0;
+		margin: 0;
+		overflow: hidden;
+		line-height: 1.5;
+		text-indent: 40px;
+		text-shadow:
+			2px 2px 4px var(--bg-light),
+			2px 2px 4px var(--bg-light),
+			2px 2px 4px var(--bg-light),
+			2px 2px 4px var(--bg-light);
+		transition: var(--transition);
+
+		@include xs {
+			font-size: 14px;
+			text-indent: 30px;
+		}
+
+		span {
+			font-weight: 700;
+		}
+	}
+}
+
+@keyframes icon-show {
+
+	0% {
+		scale: 0;
+	}
+
+	100% {
+		scale: 1;
+	}
+}

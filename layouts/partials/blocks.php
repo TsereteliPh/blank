@@ -13,7 +13,7 @@ if (have_rows('blocks', $id)) {
 			$counters[$layout]++;
 		}
 
-		if (get_row_layout() == 'about') get_template_part('layouts/blocks/about/template');
+		if (get_row_layout() == 'application') get_template_part('layouts/blocks/application/template');
 		else if (get_row_layout() == 'helmet') get_template_part('layouts/blocks/helmet/template');
 		else if (get_row_layout() == 'image-link') get_template_part('layouts/blocks/image-link/template');
 		else if (get_row_layout() == 'parameters') get_template_part('layouts/blocks/parameters/template');
