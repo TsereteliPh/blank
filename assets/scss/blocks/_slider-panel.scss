@@ -1,0 +1,94 @@
+.slider-panel {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	width: fit-content;
+
+	&__prev,
+	&__next {
+		position: relative;
+		padding: 20px 0;
+		cursor: pointer;
+		transition: var(--transition);
+
+		&::before,
+		&::after {
+			position: absolute;
+			width: 80%;
+			height: 8px;
+			border-radius: 10px;
+			visibility: hidden;
+			opacity: 0;
+			transition: var(--transition);
+			content: "";
+		}
+
+		&::before {
+			top: 0;
+			border-top: 1px solid var(--fc-grey);
+		}
+
+		&::after {
+			bottom: 0;
+			border-bottom: 1px solid var(--fc-grey);
+		}
+
+		@include mouse {
+
+			&:hover {
+
+				&::before,
+				&::after {
+					visibility: visible;
+					opacity: 1;
+				}
+
+				svg {
+					color: var(--primary);
+				}
+			}
+		}
+
+		&.swiper-button-disabled {
+			cursor: default;
+
+			&:hover {
+
+				&::before,
+				&::after {
+					visibility: hidden;
+					opacity: 0;
+				}
+
+				svg {
+					color: var(--fc-grey);
+				}
+			}
+
+			svg {
+				color: var(--fc-grey);
+			}
+		}
+
+		svg {
+			color: var(--fc-dark);
+			transition: var(--transition);
+		}
+	}
+
+	&__prev {
+
+		&::before,
+		&::after {
+			left: 0;
+		}
+	}
+
+	&__next {
+
+		&::before,
+		&::after {
+			right: 0;
+		}
+	}
+}

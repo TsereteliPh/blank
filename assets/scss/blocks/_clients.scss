@@ -1,0 +1,120 @@
+.clients {
+	margin-top: 60px;
+	padding-bottom: 115px;
+	overflow: hidden;
+	background: url(assets/images/clients-bg.jpg) no-repeat right bottom / 35vw auto;
+
+	@include md {
+		padding-bottom: 0;
+		background: none;
+	}
+
+	@include xs {
+		margin-top: 40px;
+	}
+
+	&__container {
+		padding-top: 60px;
+		border-top: 1px solid var(--fc-grey);
+		border-radius: 10px;
+
+		@include md {
+			padding: 60px 0;
+		}
+	}
+
+	&__slider {
+		margin-top: 75px;
+		padding: 0 20px;
+
+		@include hg {
+			overflow: visible;
+		}
+
+		@include md {
+			margin-top: 50px;
+			padding: 0;
+		}
+
+		@include xs {
+			margin-top: 30px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		padding: 10px 10px 30px 10px;
+		overflow: hidden;
+		background: var(--bg-light);
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		box-shadow: 0 5px 20px rgba(#000, 0.2);
+		transition: var(--transtion);
+
+		@include hg {
+			gap: 20px;
+		}
+
+		@include sm {
+			max-width: 560px;
+		}
+	}
+
+	&__img {
+		width: calc(100% + 20px);
+		max-width: none;
+		height: auto;
+		margin: -10px 0 0 -10px;
+		aspect-ratio: 7/5;
+		object-fit: cover;
+	}
+
+	&__year {
+		margin-top: 40px;
+		color: var(--primary);
+		font-weight: 700;
+		font-size: 24px;
+		font-family: var(--font-secondary);
+
+		@include hg {
+			margin-top: 0;
+		}
+
+		@include lg {
+			font-size: 20px;
+		}
+	}
+
+	&__place {
+		margin-top: 30px;
+
+		@include hg {
+			margin-top: 0;
+		}
+	}
+
+	&__label {
+		margin: 10px 0 20px;
+		font-weight: 700;
+		font-size: 26px;
+
+		@include hg {
+			margin: -10px 0 0;
+			font-size: 20px;
+		}
+
+		@include lg {
+			font-size: 18px;
+		}
+	}
+
+	&__desc {
+		margin-top: auto;
+	}
+
+	&__panel {
+		margin: 20px 0 0 10px;
+	}
+}

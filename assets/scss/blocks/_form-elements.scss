@@ -5,7 +5,7 @@
 	color: var(--fc-dark);
 	font-size: 14px;
 	background: none;
-	border: 1px solid var(--fc-dark);
+	border: 1px solid var(--fc-grey);
 	border-radius: 5px;
 	transition: var(--transition);
 
@@ -16,7 +16,7 @@
 
 	&:hover,
 	&:focus {
-		border-color: var(--primary);
+		border-color: var(--fc-dark);
 	}
 
 	&::placeholder {
@@ -26,6 +26,11 @@
 	&--light {
 		color: var(--fc-light);
 		border-color: var(--fc-light);
+
+		&:hover,
+		&:focus {
+			border-color: var(--primary);
+		}
 
 		&::placeholder {
 			color: var(--fc-light);

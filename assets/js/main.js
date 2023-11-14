@@ -256,21 +256,29 @@ try {
 
 //Слайдер blocks/rest
 
-const restCarousel = document.querySelector(".rest__wrapper");
+const clientsCarousel = document.querySelector('.clients__slider');
 
-if (restCarousel) {
-	let papersSwiper = new Swiper(restCarousel, {
+if (clientsCarousel) {
+	let clientsSwiper = new Swiper(clientsCarousel, {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		spaceBetween: 40,
 		navigation: {
-			nextEl: ".rest__next",
-			prevEl: ".rest__prev",
+			nextEl: '.slider-panel__next',
+			prevEl: '.slider-panel__prev',
 		},
 		breakpoints: {
 			1440: {
-				slidesPerView: 4,
+				slidesPerView: 3,
+				centeredSlides: false,
+				spaceBetween: 60,
+			},
+			1280: {
+				slidesPerView: 3,
 				centeredSlides: false,
 			},
 			992: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 				centeredSlides: false,
 			},
 			769: {
@@ -280,10 +288,7 @@ if (restCarousel) {
 			577: {
 				centeredSlides: false,
 			},
-		},
-		slidesPerView: "auto",
-		centeredSlides: true,
-		spaceBetween: 25,
+		}
 	});
 }
 
