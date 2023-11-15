@@ -351,3 +351,30 @@ if (application) {
 		})
 	});
 }
+
+//Функционал блока .faq
+
+let faq = document.querySelector('.faq');
+
+if (faq) {
+	const faqBtns = faq.querySelectorAll('.faq__button');
+
+	const faqBtnsClose = () => {
+		for (let btn of faqBtns) {
+			btn.classList.remove('active');
+			btn.nextElementSibling.style.maxHeight = 0;
+		}
+	}
+
+	faqBtns.forEach(btn => {
+		btn.addEventListener('click', function() {
+			if (this.classList.contains('active')) {
+				faqBtnsClose();
+			} else {
+				faqBtnsClose();
+				this.classList.add('active');
+				slideToggle(this.nextElementSibling);
+			}
+		})
+	});
+}
