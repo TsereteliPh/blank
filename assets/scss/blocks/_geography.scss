@@ -1,0 +1,148 @@
+.geography {
+	position: relative;
+	overflow: hidden;
+	color: var(--fc-light);
+	background: var(--bg-dark) url(assets/images/lines-bg.jpg) no-repeat right bottom / 3000px auto;
+
+	@include md {
+		background-position: 70% -500px;
+		background-size: 1800px auto;
+	}
+
+	@include xs {
+		background-position: 70% -350px;
+		background-size: 1000px auto;
+	}
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 30%;
+		height: 100%;
+		background: var(--primary);
+		content: "";
+
+		@include hg {
+			left: 60%;
+			width: 25%;
+		}
+
+		@include md {
+			display: none;
+		}
+	}
+
+	&__container {
+		padding: 140px 0 90px;
+
+		@include hg {
+			padding: 60px 0 90px;
+		}
+
+		@include md {
+			padding: 60px 0;
+		}
+
+		@include xs {
+			padding: 60px 0 100px;
+		}
+	}
+
+	&__title {
+		max-width: 520px;
+
+		@include md {
+			max-width: none;
+		}
+	}
+
+	&__map {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 75%;
+		height: auto;
+		aspect-ratio: 37/23;
+		background: url(assets/images/objects-map.png) no-repeat 50% / contain;
+
+		@include lg {
+			top: 50%;
+			bottom: auto;
+			transform: translateY(-50%);
+		}
+
+		@include md {
+			position: static;
+			width: 100%;
+			margin-top: 20px;
+			transform: none;
+		}
+
+		@include xs {
+			width: calc(100% + 1.5rem);
+			min-height: 760px;
+			margin: -250px 0 0 -0.75rem;
+			aspect-ratio: auto;
+			background-position: -90px bottom;
+			background-size: auto 100%;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 45px;
+		margin-top: 100px;
+
+		@include hg {
+			gap: 30px;
+			margin-top: 80px;
+		}
+
+		@include md {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 40px;
+		}
+
+		@include xs {
+			flex-direction: column;
+			margin-top: 10px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding: 5px 0 0 60px;
+		font-weight: 300;
+		font-size: 24px;
+
+		@include hg {
+			padding: 5px 0 0 40px;
+		}
+
+		@include lg {
+			font-size: 20px;
+		}
+
+		@include md {
+			width: 45%;
+		}
+
+		@include xs {
+			width: 100%;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 25px;
+			height: 35px;
+			background: url(assets/images/icon-pin.png) no-repeat 50% / contain;
+			content: "";
+		}
+	}
+}
