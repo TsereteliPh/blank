@@ -41,7 +41,7 @@
 							<button class="faq__button" type="button">
 								<?php echo $item['question']; ?>
 
-								<span><svg width="18" height="18"><use xlink:href="<?php echo get_template_directory_uri();?>/assets/images/sprite.svg#icon-arrow-thic"></use></svg></span>
+								<span><svg width="28" height="28"><use xlink:href="<?php echo get_template_directory_uri();?>/assets/images/sprite.svg#icon-arrow-thic"></use></svg></span>
 							</button>
 
 							<div class="faq__answer"><?php echo $item['answer']; ?></div>

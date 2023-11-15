@@ -13,7 +13,7 @@
 
 	&__container {
 		display: grid;
-		grid-template-columns: 575px 1fr;
+		grid-template-columns: 660px 1fr;
 		gap: 100px;
 
 		@include hg {
@@ -36,7 +36,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 575px;
+		width: 660px;
 		height: 100%;
 		padding: 155px 30px;
 		overflow: hidden;
@@ -225,6 +225,14 @@
 
 		span {
 			transition: var(--transition);
+		}
+
+		svg {
+
+			@include sm {
+				width: 22px;
+				height: auto;
+			}
 		}
 	}
 
