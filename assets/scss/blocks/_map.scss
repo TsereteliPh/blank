@@ -1,0 +1,76 @@
+.map {
+	background: var(--bg-dark);
+
+	&__ticker {
+		position: relative;
+		padding-bottom: 10px;
+		overflow: hidden;
+	}
+
+	&__ticker-box {
+		display: flex;
+
+		svg {
+			flex-shrink: 0;
+			box-sizing: content-box;
+			padding: 0 70px;
+			color: var(--bg-dark);
+			white-space: nowrap;
+			animation: map-ticker 5s linear infinite;
+
+			@include lg {
+				padding: 0 50px;
+			}
+
+			@include xs {
+				padding: 0 30px;
+			}
+		}
+	}
+
+	&__holder {
+		position: relative;
+		min-height: 630px;
+		border-top: 6px solid var(--primary);
+		border-bottom: 6px solid var(--primary);
+
+		@include hg {
+			min-height: 500px;
+		}
+
+		@include xs {
+			border-width: 4px;
+		}
+
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: var(--fc-light);
+			mix-blend-mode: difference;
+			content: "";
+			pointer-events: none;
+		}
+
+		[class*="copyrights"] {
+			display: none;
+		}
+
+		ymaps {
+			filter: grayscale(1);
+		}
+	}
+}
+
+@keyframes map-ticker {
+
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
