@@ -10,7 +10,7 @@ if ( !empty( $args['title']['text'] ) && !empty( $args['title']['before'] ) ) {
 		$args['title']['type'],
 		$args['title']['text']
 	);
-} else {
+} else if ( !empty( $args['title']['text'] ) ) {
 	echo sprintf(
         '<div class="title %1$s">
             <%2$s class="title__text">%3$s</%2$s>

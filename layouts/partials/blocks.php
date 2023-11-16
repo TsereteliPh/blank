@@ -13,7 +13,8 @@ if (have_rows('blocks', $id)) {
 			$counters[$layout]++;
 		}
 
-		if (get_row_layout() == 'application') get_template_part('layouts/blocks/application/template');
+		if (get_row_layout() == 'about') get_template_part('layouts/blocks/about/template');
+		else if (get_row_layout() == 'application') get_template_part('layouts/blocks/application/template');
 		else if (get_row_layout() == 'chimera') get_template_part('layouts/blocks/chimera/template');
 		else if (get_row_layout() == 'clients') get_template_part('layouts/blocks/clients/template');
 		else if (get_row_layout() == 'faq') get_template_part('layouts/blocks/faq/template');
