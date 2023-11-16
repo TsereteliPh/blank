@@ -71,3 +71,44 @@
 		transition: var(--transition);
 	}
 }
+
+.btn-download {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+	background: var(--primary);
+	border: none;
+	border-radius: 50%;
+
+	@include mouse {
+
+		&:hover {
+
+			svg {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&::before {
+		position: absolute;
+		bottom: 15px;
+		left: 50%;
+		width: 30px;
+		height: 10px;
+		border-bottom: 1px solid var(--fc-light);
+		border-radius: 10px;
+		transform: translateX(-50%);
+		content: "";
+	}
+
+	svg {
+		color: var(--fc-light);
+		transform: translateY(-3px);
+		transition: var(--transition);
+	}
+}
