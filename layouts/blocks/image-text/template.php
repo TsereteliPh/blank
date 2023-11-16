@@ -1,7 +1,7 @@
 <section class="image-text">
 	<div class="container image-text__container">
 		<?php get_template_part('/layouts/partials/title', null, array(
-			'class' => 'faq__title',
+			'class' => 'image-text__title',
 			'title' => get_sub_field('title')
 		)); ?>
 
