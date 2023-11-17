@@ -1,0 +1,36 @@
+.news {
+	margin-top: 100px;
+	padding-bottom: 80px;
+
+	@include md {
+		margin-top: 60px;
+	}
+
+	@include xs {
+		margin-top: 40px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 40px 20px;
+		margin-top: 60px;
+
+		@include hg {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include md {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include xs {
+			grid-template-columns: 1fr;
+			margin-top: 40px;
+		}
+	}
+
+	&__button {
+		margin: 40px auto 0;
+	}
+}

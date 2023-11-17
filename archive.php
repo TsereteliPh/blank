@@ -1,42 +1,55 @@
 <?php get_header(); ?>
 
-<section class="archive-block">
+<section class="news">
 	<div class="container">
-		<div class="archive-block__header">
-			<?php
-			the_archive_title('<h1 class="title archive-block__title">', '</h1>');
-			the_archive_description('<div class="archive-block__description">', '</div>');
-			?>
-		</div>
+		<h1 class="title news__title">
+			<div class="title__text">Новости</div>
+		</h1>
+
 		<?php
-		$term = get_queried_object();
-		$categoryID = get_cat_ID($term->name);
-		$acfPostID = 'category_' .  $categoryID
+			$args = [
+				'post_type' => 'post',
+				'cat' => 4,
+				'posts_per_page' => 8,
+				'orderby' => 'post_date',
+			];
+
+			$query = new WP_Query($args);
+			$posts = $query->posts;
+
+			if ( $query->have_posts() ) :
 		?>
-		<?php if (have_posts()) : ?>
-			<div class="archive-block__body js-show-more-container">
+			<ul class="reset-list news__list js-show-more-container">
 				<?php
-				while (have_posts()) {
-					the_post();
-					if ($categoryID == 25 || $categoryID == 26) get_template_part('layouts/partials/service-card');
-					else get_template_part('layouts/partials/post-card');
-				}
+					if ( is_archive() ) {
+						foreach ( $posts as $post ) {
+							get_template_part('layouts/partials/cards/news', null, array(
+								'class' => 'news__item'
+							));
+						}
+					} else {
+						while ( $query->have_posts() ) {
+							$query->the_post();
+
+							get_template_part('layouts/partials/cards/news', null, array(
+								'class' => 'news__item'
+							));
+						}
+
+						wp_reset_postdata();
+					}
 				?>
-				<?php $additionalDescription = get_field('services-additional-description', $acfPostID); ?>
-				<?php if($additionalDescription) : ?>
-				  <div class="archive-block__footer"><?php echo $additionalDescription; ?></div>
-				<?php endif; ?>
-				<?php if ($categoryID !== 25 && $categoryID !== 26 && $wp_query->max_num_pages > 1) : ?>
-					<button class="js-show-more btn archive-block__btn" type="button" data-text="Показать еще">Показать еще</button>
-					<script>
-						let posts = '<?php echo json_encode($wp_query->query_vars); ?>';
-						let current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
-						let max_pages = <?php echo $wp_query->max_num_pages; ?>;
-					</script>
-				<?php endif; ?>
-			</div>
-		<?php else : ?>
-			<p>Нет записей для показа</p>
+			</ul>
+
+			<?php if ( $query->max_num_pages > 1 ) : ?>
+				<button class="btn-show-more news__button js-show-more" type="button">Показать еще</button>
+
+				<script>
+					let posts = '<?php echo json_encode($query->query_vars); ?>';
+					let current_page = <?php echo ( get_query_var('paged') ) ? get_query_var('paged') : 1; ?>;
+					let max_pages = <?php echo $query->max_num_pages; ?>;
+				</script>
+			<?php endif; ?>
 		<?php endif; ?>
 	</div>
 </section>

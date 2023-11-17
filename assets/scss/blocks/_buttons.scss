@@ -112,3 +112,31 @@
 		transition: var(--transition);
 	}
 }
+
+.btn-show-more {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 350px;
+	padding: 30px 35px;
+	font-weight: 700;
+	font-family: var(--font-secondary);
+	text-transform: uppercase;
+	text-decoration: none;
+	background: none;
+	border: none;
+	border-top: 1px solid var(--fc-dark);
+	border-bottom: 1px solid var(--fc-dark);
+	border-radius: 10px;
+	cursor: pointer;
+	transition: var(--transition);
+
+	@include mouse {
+
+		&:hover {
+			color: var(--primary);
+		}
+	}
+
+}

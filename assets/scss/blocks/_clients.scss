@@ -116,5 +116,9 @@
 
 	&__panel {
 		margin: 20px 0 0 10px;
+
+		@include xs {
+			margin: 20px auto 0;
+		}
 	}
 }

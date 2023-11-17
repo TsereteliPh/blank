@@ -197,7 +197,7 @@ function showMorePosts() {
 	show_more_btn.addEventListener("click", function (e) {
 		e.stopImmediatePropagation();
 		const container = document.querySelector(".js-show-more-container");
-		this.textContent = "Загрузка...";
+		this.classList.add('loader');
 
 		const response = fetch(adem_ajax.url, {
 			method: "POST",
@@ -212,8 +212,8 @@ function showMorePosts() {
 		})
 			.then((response) => response.text())
 			.then((data) => {
-				this.innerHTML = this.dataset.text;
 				container.insertAdjacentHTML("beforeend", data);
+				this.classList.remove('loader');
 				current_page++;
 				if (current_page === max_pages) this.remove();
 			})
@@ -279,6 +279,39 @@ if (clientsCarousel) {
 			},
 			992: {
 				slidesPerView: 2,
+				centeredSlides: false,
+			},
+			769: {
+				slidesPerView: 2,
+				centeredSlides: false,
+			},
+			577: {
+				centeredSlides: false,
+			},
+		}
+	});
+}
+
+//Слайдер blocks/news-slider
+
+const newsCarousel = document.querySelector('.news-slider__slider');
+
+if (newsCarousel) {
+	let newsSwiper = new Swiper(newsCarousel, {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.slider-panel__next',
+			prevEl: '.slider-panel__prev',
+		},
+		breakpoints: {
+			1440: {
+				slidesPerView: 4,
+				centeredSlides: false,
+			},
+			992: {
+				slidesPerView: 3,
 				centeredSlides: false,
 			},
 			769: {
