@@ -4,10 +4,12 @@
 
 	@include md {
 		margin-top: 60px;
+		padding-bottom: 60px;
 	}
 
 	@include xs {
 		margin-top: 40px;
+		padding-bottom: 60px;
 	}
 
 	&__list {

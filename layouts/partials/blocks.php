@@ -18,6 +18,7 @@ if (have_rows('blocks', $id)) {
 		else if (get_row_layout() == 'certificates') get_template_part('layouts/blocks/certificates/template');
 		else if (get_row_layout() == 'chimera') get_template_part('layouts/blocks/chimera/template');
 		else if (get_row_layout() == 'clients') get_template_part('layouts/blocks/clients/template');
+		else if (get_row_layout() == 'contacts') get_template_part('layouts/blocks/contacts/template');
 		else if (get_row_layout() == 'faq') get_template_part('layouts/blocks/faq/template');
 		else if (get_row_layout() == 'geography') get_template_part('layouts/blocks/geography/template');
 		else if (get_row_layout() == 'helmet') get_template_part('layouts/blocks/helmet/template');
