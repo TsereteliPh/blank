@@ -15,6 +15,7 @@ if (have_rows('blocks', $id)) {
 
 		if (get_row_layout() == 'about') get_template_part('layouts/blocks/about/template');
 		else if (get_row_layout() == 'application') get_template_part('layouts/blocks/application/template');
+		else if (get_row_layout() == 'catalog') get_template_part('layouts/blocks/catalog/template');
 		else if (get_row_layout() == 'certificates') get_template_part('layouts/blocks/certificates/template');
 		else if (get_row_layout() == 'chimera') get_template_part('layouts/blocks/chimera/template');
 		else if (get_row_layout() == 'clients') get_template_part('layouts/blocks/clients/template');

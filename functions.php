@@ -34,35 +34,35 @@ if (!function_exists('adem_setup')) {
 	}
 
 	//	register thumbnails
-//	add_image_size('123x123', 123, 123, true);
+	add_image_size('700x640', 700, 640, true);
 
 	//	register post types
-//	register_post_type('review', [
-//		'label' => null,
-//		'labels' => [
-//			'name' => 'Отзывы',
-//			'singular_name' => 'Отзыв',
-//			'add_new' => 'Добавить отзыв',
-//			'add_new_item' => 'Добавить отзыв',
-//			'edit_item' => 'Редактировать отзыв',
-//			'new_item' => 'Новый отзыв',
-//			'view_item' => 'Смотреть отзыв',
-//			'search_items' => 'Найти отзыв',
-//			'not_found' => 'Не найдено',
-//			'not_found_in_trash' => 'Не найдено в корзине',
-//			'menu_name' => 'Отзывы',
-//		],
-//		'public' => true,
-//		'show_in_menu' => true,
-//		'menu_position' => 21,
-//		'menu_icon' => 'dashicons-format-chat',
-//		'supports' => ['title', 'editor'],
-//		'taxonomies' => ['review_type'],
-//		'has_archive' => false,
-//		'rewrite' => true,
-//		'query_var' => true,
-//		'publicly_queryable' => false
-//	]);
+	register_post_type('products', [
+		'label' => null,
+		'labels' => [
+			'name' => 'Продукция',
+			'singular_name' => 'Товар',
+			'add_new' => 'Добавить товар',
+			'add_new_item' => 'Добавить товар',
+			'edit_item' => 'Редактировать товар',
+			'new_item' => 'Новый товар',
+			'view_item' => 'Смотреть товар',
+			'search_items' => 'Найти товар',
+			'not_found' => 'Не найдено',
+			'not_found_in_trash' => 'Не найдено в корзине',
+			'menu_name' => 'Продукция',
+		],
+		'public' => true,
+		'show_in_menu' => true,
+		'menu_position' => 21,
+		'menu_icon' => 'dashicons-store',
+		'supports' => ['title', 'editor', 'thumbnail'],
+		'taxonomies' => ['product_type'],
+		'has_archive' => false,
+		'rewrite' => true,
+		'query_var' => true,
+		'publicly_queryable' => true
+	]);
 }
 
 add_action('after_setup_theme', 'adem_setup');
