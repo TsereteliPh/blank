@@ -1,0 +1,145 @@
+.tabs {
+	margin-top: 120px;
+	padding-bottom: 30px;
+
+	@include md {
+		margin-top: 80px;
+	}
+
+	@include xs {
+		margin-top: 60px;
+	}
+
+	&__controls {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 45px;
+		align-items: center;
+
+		@include hg {
+			gap: 30px;
+		}
+	}
+
+	&__label {
+		font-size: 64px;
+		font-family: var(--font-secondary);
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: var(--transition);
+
+		@include hg {
+			font-size: 48px;
+		}
+
+		@include lg {
+			font-size: 38px;
+		}
+
+		@include xs {
+			font-size: 28px;
+		}
+
+		&.active {
+			color: var(--primary);
+			cursor: default;
+		}
+	}
+
+	&__list {
+		position: relative;
+		margin-top: 20px;
+		overflow: hidden;
+	}
+
+	&__item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: grid;
+		grid-auto-rows: min-content(min-content, auto);
+		grid-template-columns: 1fr 2fr;
+		gap: 40px 80px;
+		align-items: center;
+		width: 100%;
+		height: fit-content;
+		visibility: hidden;
+
+		@include hg {
+			grid-template-columns: 3fr 4fr;
+			gap: 40px;
+		}
+
+		@include md {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include sm {
+			grid-template-columns: 1fr;
+		}
+
+		&.active {
+			position: static;
+			visibility: visible;
+			animation: tab-show 0.3s ease-in-out;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__text {
+
+		@include xs {
+			font-size: 14px;
+		}
+	}
+
+	&__companies {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+
+		@include xs {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&__company {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+
+		img {
+			width: 100%;
+			max-width: 65%;
+			height: auto;
+			max-height: 80%;
+			object-fit: contain;
+		}
+	}
+
+	&__background {
+		width: 100%;
+		height: auto;
+		max-height: 535px;
+		object-fit: contain;
+	}
+}
+
+@keyframes tab-show {
+
+	0% {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

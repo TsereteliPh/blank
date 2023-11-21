@@ -54,6 +54,56 @@ acf_add_local_field_group(array(
 				'acfe_flexible_grid_wrap' => false,
 			),
 			'layouts' => array(
+				'layout_655b3bd025aa3' => array(
+					'key' => 'layout_655b3bd025aa3',
+					'name' => 'tabs',
+					'label' => 'Вкладки',
+					'display' => 'block',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_655b3bda25aa6',
+							'label' => '',
+							'name' => '',
+							'aria-label' => '',
+							'type' => 'clone',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'clone' => array(
+								0 => 'group_655b3a6186c71',
+							),
+							'display' => 'seamless',
+							'layout' => 'block',
+							'prefix_label' => 0,
+							'prefix_name' => 0,
+							'acfe_field_group_condition' => 0,
+							'acfe_seamless_style' => 0,
+							'acfe_clone_modal' => 0,
+							'acfe_clone_modal_close' => 0,
+							'acfe_clone_modal_button' => '',
+							'acfe_clone_modal_size' => 'large',
+						),
+					),
+					'min' => '',
+					'max' => '',
+					'acfe_flexible_thumbnail' => '',
+					'acfe_flexible_render_template' => false,
+					'acfe_flexible_render_style' => false,
+					'acfe_flexible_render_script' => false,
+					'acfe_flexible_settings' => false,
+					'acfe_flexible_settings_size' => 'medium',
+					'acfe_layout_locations' => array(
+					),
+					'acfe_flexible_modal_edit_size' => false,
+					'acfe_flexible_category' => false,
+					'acfe_layout_col' => 'auto',
+					'acfe_layout_allowed_col' => false,
+				),
 				'layout_6554a0e2bfb7f' => array(
 					'key' => 'layout_6554a0e2bfb7f',
 					'name' => 'faq',
@@ -902,7 +952,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1700397887,
+	'modified' => 1700477925,
 ));
 
 endif;

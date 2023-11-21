@@ -29,5 +29,6 @@ if (have_rows('blocks', $id)) {
 		else if (get_row_layout() == 'news-slider') get_template_part('layouts/blocks/news-slider/template');
 		else if (get_row_layout() == 'parameters') get_template_part('layouts/blocks/parameters/template');
 		else if (get_row_layout() == 'product-desc') get_template_part('layouts/blocks/product-desc/template');
+		else if (get_row_layout() == 'tabs') get_template_part('layouts/blocks/tabs/template');
 	}
 }
