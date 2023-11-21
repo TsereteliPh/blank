@@ -11,7 +11,7 @@
 		)); ?>
 
 		<?php if ( $video ) : ?>
-			<a href="<?php echo $video[$video['type']]; ?>" class="about__video" data-fancybox>
+			<a href="<?php echo $video[$video['type']]; ?>" class="video about__video" data-fancybox>
 				<?php
 					if ( $video['img'] ) {
 						echo wp_get_attachment_image( $video['img'], 'full', false );
@@ -20,7 +20,7 @@
 					};
 				?>
 
-				<button class="about__video-play" type="button"></button>
+				<button class="btn-play" type="button"></button>
 			</a>
 		<?php endif; ?>
 

@@ -1,0 +1,23 @@
+.st-ul {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	width: 100%;
+
+	li {
+		position: relative;
+		padding-left: 30px;
+		font-family: var(--font-primary);
+
+		&::before {
+			position: absolute;
+			top: 5px;
+			left: 10px;
+			width: 5px;
+			height: 5px;
+			background: var(--primary);
+			border-radius: 50%;
+			content: "";
+		}
+	}
+}

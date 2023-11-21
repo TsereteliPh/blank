@@ -28,7 +28,7 @@
 								<li class="parameters__item parameters__item--several">
 									<?php echo $parameter['item']; ?>
 
-									<ul class="reset-list parameters__item-list">
+									<ul class="reset-list st-ul parameters__item-list">
 										<?php foreach ( $parameter['values'] as $item ) : ?>
 											<li class="parameters__item-item">
 												<?php echo $item['item']; ?>

@@ -138,5 +138,24 @@
 			color: var(--primary);
 		}
 	}
+}
 
+.btn-play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 0;
+	background: none;
+	border: none;
+	transform: translate(-40%, -50%);
+	transition: var(--transition);
+	@include ui-triangle(to right, 80px, 80px, var(--fc-light));
+
+	@include sm {
+		@include ui-triangle(to right, 60px, 60px, var(--fc-light));
+	}
+
+	@include xs {
+		@include ui-triangle(to right, 40px, 40px, var(--fc-light));
+	}
 }

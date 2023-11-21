@@ -7,6 +7,25 @@ acf_add_local_field_group(array(
 	'title' => 'Товар',
 	'fields' => array(
 		array(
+			'key' => 'field_655cc70e43045',
+			'label' => '',
+			'name' => '',
+			'aria-label' => '',
+			'type' => 'message',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Изображение товара (featured image), должно быть с соотношением сторон 35 : 32 или размером 700x640',
+			'new_lines' => 'wpautop',
+			'esc_html' => 0,
+			'acfe_field_group_condition' => 0,
+		),
+		array(
 			'key' => 'field_6559efb605304',
 			'label' => 'Описание продукта',
 			'name' => 'desc',
@@ -53,7 +72,7 @@ acf_add_local_field_group(array(
 		array(
 			'key' => 'field_6559f04405306',
 			'label' => 'Характеристики',
-			'name' => 'characterisrics',
+			'name' => 'characteristics',
 			'aria-label' => '',
 			'type' => 'repeater',
 			'instructions' => '',
@@ -587,7 +606,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1700405002,
+	'modified' => 1700579226,
 ));
 
 endif;

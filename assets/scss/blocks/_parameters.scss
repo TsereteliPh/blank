@@ -101,33 +101,16 @@
 	}
 
 	&__item-list {
-		display: flex;
-		flex-direction: column;
 		gap: 15px;
-		width: 100%;
 	}
 
 	&__item-item {
-		position: relative;
 		display: flex;
 		gap: 40px;
 		align-items: center;
 		justify-content: space-between;
-		padding-left: 30px;
 		font-weight: 400;
 		font-size: 14px;
-		font-family: var(--font-primary);
-
-		&::before {
-			position: absolute;
-			top: 5px;
-			left: 10px;
-			width: 5px;
-			height: 5px;
-			background: var(--primary);
-			border-radius: 50%;
-			content: "";
-		}
 
 		span {
 			font-size: 16px;
