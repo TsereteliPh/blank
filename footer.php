@@ -50,11 +50,23 @@
                 'menu_class' => 'reset-list footer__menu'
             ));	?>
 
-			<form method="POST" class="footer__mailing">
+			<form method="POST" class="footer__mailing" name="Рассылка">
+				<?php
+					if (is_archive()) {
+						$pageTitle = get_the_archive_title();
+					} else {
+						$pageTitle = get_the_title();
+					}
+
+					wp_nonce_field( 'Рассылка', 'mailing_input' );
+				?>
+
+				<input type="text" class="hidden" name="page_request" value="<?php echo $pageTitle; ?>">
+
 				<label for="footer_mailing">Подписаться на&nbsp;новостную рассылку</label>
 
 				<div class="footer__mailing-input">
-					<input class="input input--light" type="email" name="" id="footer_mailing" placeholder="E - mail" required>
+					<input class="input input--light" type="email" name="client_email" id="footer_mailing" placeholder="E - mail" required>
 
 					<button class="footer__mailing-submit" type="submit">
 						<svg width="18" height="18"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-arrow-thic"></use></svg>

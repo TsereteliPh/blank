@@ -48,7 +48,19 @@
 			<?php endif; ?>
 		</div>
 
-		<form method="POST" class="contacts__form">
+		<form method="POST" class="contacts__form" name="Контакты">
+			<?php
+				if (is_archive()) {
+					$pageTitle = get_the_archive_title();
+				} else {
+					$pageTitle = get_the_title();
+				}
+
+				wp_nonce_field( 'Контакты', 'contact_input' );
+			?>
+
+			<input type="text" class="hidden" name="page_request" value="<?php echo $pageTitle; ?>">
+
 			<div class="contacts__form-label">Свяжитесь с нами</div>
 
 			<div class="contacts__form-wrapper">

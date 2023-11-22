@@ -1,0 +1,81 @@
+.modal {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	max-width: 830px;
+	padding: 50px 80px;
+
+	@include md {
+		max-width: 600px;
+		padding: 40px 60px;
+	}
+
+	@include xs {
+		padding: 40px 20px;
+	}
+
+	&--success {
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		max-width: 600px;
+		min-height: 400px;
+		aspect-ratio: 4/3;
+
+		@include sm {
+			aspect-ratio: auto;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			background: url(assets/images/lines-bg.jpg) no-repeat 50% / cover;
+			filter: invert(1);
+			content: "";
+		}
+	}
+
+	&__title {
+		margin: 0;
+		color: var(--primary);
+		font-size: 30px;
+		font-family: var(--font-secondary);
+		text-align: center;
+
+		@include sm {
+			font-size: 26px;
+		}
+
+		@include xs {
+			font-size: 22px;
+		}
+	}
+
+	&__text {
+		margin-top: 40px;
+		font-size: 18px;
+		line-height: 1.35;
+		text-align: center;
+
+		@include sm {
+			margin-top: 20px;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 40px;
+
+		@include sm {
+			gap: 15px;
+			margin-top: 25px;
+		}
+	}
+}
+
