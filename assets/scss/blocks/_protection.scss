@@ -1,0 +1,206 @@
+.protection {
+	margin-top: 140px;
+	padding-bottom: 50px;
+
+	@include hg {
+		margin-top: 80px;
+	}
+
+	@include md {
+		margin-top: 60px;
+		padding-bottom: 30px;
+	}
+
+	@include xs {
+		margin-top: 40px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+		margin-top: 60px;
+
+		@include hg {
+			gap: 80px;
+		}
+
+		@include md {
+			gap: 60px;
+			margin-top: 45px;
+		}
+
+		@include xs {
+			gap: 40px;
+			margin-top: 30px;
+		}
+	}
+
+	&__item-title {
+		max-width: 500px;
+		margin-bottom: 25px;
+		padding-left: 40px;
+		font-weight: 700;
+		font-size: 24px;
+		font-family: var(--font-secondary);
+
+		@include hg {
+			padding-left: 0;
+		}
+
+		@include md {
+			font-size: 20px;
+		}
+
+		@include xs {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__item-content {
+		display: grid;
+		grid-template-columns: 1fr 1.2fr 1fr;
+		gap: 75px;
+		align-items: center;
+		padding: 60px 40px 30px;
+		border-top: 1px solid var(--fc-dark);
+		border-bottom: 1px solid var(--fc-dark);
+		border-radius: 10px;
+
+		@include hg {
+			gap: 40px;
+			padding: 40px 0;
+		}
+
+		@include lg {
+			grid-template-columns: 1fr 1fr;
+			gap: 40px 80px;
+		}
+
+		@include md {
+			gap: 40px;
+		}
+
+		@include sm {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		@include xs {
+			gap: 30px;
+			padding: 30px 0;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+		max-height: 550px;
+		object-fit: contain;
+
+		@include sm {
+			max-width: 550px;
+			margin: 0 auto;
+		}
+
+		&--area {
+
+			@include lg {
+				grid-column: span 2;
+			}
+		}
+	}
+
+	&__item-info {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		@include md {
+			gap: 20px;
+		}
+
+		@include sm {
+			width: 100%;
+		}
+
+		@include sm {
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	&__item-label {
+		font-size: 36px;
+		font-family: var(--font-secondary);
+
+		@include lg {
+			font-size: 32px;
+		}
+
+		@include md {
+			font-size: 28px;
+		}
+
+		@include xs {
+			font-size: 22px;
+		}
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	&__item-text {
+
+		@include xs {
+			font-size: 14px;
+		}
+	}
+
+	&__item-area {
+		color: var(--fc-grey);
+		font-size: 14px;
+
+		@include xs {
+			font-size: 12px;
+		}
+
+		span {
+			display: block;
+			color: var(--fc-dark);
+			font-weight: 700;
+			font-size: 16px;
+
+			@include xs {
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__item-link {
+		gap: 25px;
+		padding: 10px 0;
+		border: none;
+
+		@include sm {
+			justify-content: center;
+			padding: 10px 0;
+		}
+
+		@include xs {
+			gap: 20px;
+			justify-content: center;
+			font-size: 14px;
+		}
+
+		svg {
+
+			@include xs {
+				width: 20px;
+				height: auto;
+			}
+		}
+	}
+}
