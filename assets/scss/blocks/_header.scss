@@ -14,7 +14,42 @@
 		}
 	}
 
+	&.active {
+
+		.header__container {
+			padding: 10px 20px 30px;
+			overflow: auto;
+			background-color: rgba(var(--bg-light-rgb), 0.3);
+			backdrop-filter: blur(5px);
+
+			@include md {
+				padding: 10px 10px 20px;
+			}
+
+			@include xs {
+				padding: 5px 5px 10px;
+			}
+		}
+
+		.header__drop {
+			padding-top: 60px;
+
+			@include hg {
+				padding-top: 40px;
+			}
+
+			@include sm {
+				padding-top: 30px;
+			}
+
+			@include xs {
+				padding-top: 20px;
+			}
+		}
+	}
+
 	&__container {
+		max-height: calc(100svh - 20px);
 		margin-top: 40px;
 		padding: 10px 20px;
 		border-top: 1px solid #ccc;
@@ -237,6 +272,105 @@
 
 		@include xs {
 			display: none;
+		}
+	}
+
+	&__drop {
+		box-sizing: content-box;
+		max-height: 0;
+		overflow: hidden;
+		transition: var(--transition);
+	}
+
+	&__drop-menu {
+		column-count: 4;
+		column-gap: 80px;
+
+		@include hg {
+			column-count: 3;
+		}
+
+		@include sm {
+			column-count: 2;
+			column-gap: 40px;
+		}
+
+		@include xs {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		> .menu-item {
+			break-inside: avoid;
+			margin-bottom: 15px;
+
+			@include xs {
+				break-inside: auto;
+				margin-bottom: 0;
+			}
+		}
+
+		.menu-item {
+
+			> a {
+				display: block;
+				font-weight: 700;
+				font-family: var(--font-secondary);
+				text-decoration: none;
+				transition: var(--transition);
+
+				@include mouse {
+
+					&:hover {
+						color: var(--primary);
+					}
+
+					&:active {
+						opacity: 0.8;
+					}
+				}
+			}
+
+			&.menu-item-has-children {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+			}
+		}
+
+		.sub-menu {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin: 0;
+			padding: 0 0 0 10px;
+			list-style: none;
+
+			.menu-item {
+
+				> a {
+					font-weight: 400;
+					font-family: var(font-primary);
+				}
+			}
+		}
+
+		.current-menu-item {
+
+			> a {
+				color: var(--primary);
+				font-weight: 700;
+				cursor: default;
+
+				@include mouse {
+
+					&:hover,
+					&:active {
+						color: var(--primary);
+					}
+				}
+			}
 		}
 	}
 }

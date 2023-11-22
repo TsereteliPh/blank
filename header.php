@@ -22,12 +22,12 @@
 				<svg width="270" height="30"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#logo-main"></use></svg>
 			</a>
 
-			<?php wp_nav_menu(array(
+			<?php wp_nav_menu( array(
 				'theme_location' => 'menu_main',
 				'container' => '',
 				'menu_id' => 'menu-main',
 				'menu_class' => 'reset-list header__menu'
-			)); ?>
+			) ); ?>
 
 			<?php
 				$tel = get_field( 'tel', 'options' );
@@ -40,7 +40,12 @@
 		</div>
 
 		<div class="header__drop">
-			<?php //todo: drop menu ?>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'menu_drop',
+				'container' => '',
+				'menu_id' => 'menu-drop',
+				'menu_class' => 'reset-list header__drop-menu'
+			) ); ?>
 		</div>
 	</div>
 </header>

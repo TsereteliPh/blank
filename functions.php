@@ -29,6 +29,7 @@ if (!function_exists('adem_setup')) {
 			array(
 				'menu_main' => 'Основное меню',
 				'menu_footer' => 'Меню в футере',
+				'menu_drop' => 'Выпадающее меню'
 			)
 		);
 	}
