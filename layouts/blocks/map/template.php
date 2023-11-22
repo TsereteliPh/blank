@@ -12,6 +12,8 @@
 			<svg width="200" height="25"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#logo-main"></use></svg>
 
 			<svg width="200" height="25"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#logo-main"></use></svg>
+
+			<svg width="200" height="25"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#logo-main"></use></svg>
 		</div>
 	</div>
 
