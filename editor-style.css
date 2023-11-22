@@ -1,1 +1,25 @@
+.st-ul {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	width: 100%;
+	list-style: none;
+}
 
+.st-ul li {
+	position: relative;
+	padding-left: 30px;
+	font-family: var(--font-primary);
+}
+
+st-ul li::before {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	width: 5px;
+	height: 5px;
+	background: var(--primary);
+	border-radius: 50%;
+	transform: translateY(-50%);
+	content: "";
+}

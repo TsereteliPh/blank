@@ -3,6 +3,8 @@
 	flex-direction: column;
 	gap: 5px;
 	width: 100%;
+	padding: 0;
+	list-style: none;
 
 	li {
 		position: relative;
@@ -11,13 +13,18 @@
 
 		&::before {
 			position: absolute;
-			top: 5px;
+			top: 50%;
 			left: 10px;
 			width: 5px;
 			height: 5px;
 			background: var(--primary);
 			border-radius: 50%;
+			transform: translateY(-50%);
 			content: "";
+
+			@include sm {
+				top: 10px;
+			}
 		}
 	}
 }

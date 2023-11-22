@@ -5,14 +5,9 @@ function change_toolbar($args)
 {
 	$style_formats = [
 		[
-			'title' => 'Ненумерованный список',
+			'title' => 'Ненумерованный список (синий маркер)',
 			'selector' => 'ul',
-			'classes' => 'article-ul',
-		],
-		[
-			'title' => 'Нумерованный список',
-			'selector' => 'ol',
-			'classes' => 'article-ol',
+			'classes' => 'st-ul',
 		],
 		[
 			'title' => 'Стиль текста',
@@ -29,13 +24,6 @@ function change_toolbar($args)
 					'selector' => 'ul, ol, a, p, span',
 					'styles' => [
 						'font-weight' => '500',
-					],
-				],
-				[
-					'title' => 'Extra Bold',
-					'selector' => 'ul, ol, a, p, span',
-					'styles' => [
-						'font-weight' => '800',
 					],
 				],
 			]

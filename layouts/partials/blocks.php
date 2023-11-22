@@ -25,6 +25,7 @@ if (have_rows('blocks', $id)) {
 		else if (get_row_layout() == 'helmet') get_template_part('layouts/blocks/helmet/template');
 		else if (get_row_layout() == 'image-link') get_template_part('layouts/blocks/image-link/template');
 		else if (get_row_layout() == 'image-text') get_template_part('layouts/blocks/image-text/template');
+		else if (get_row_layout() == 'main-text') get_template_part('layouts/blocks/main-text/template');
 		else if (get_row_layout() == 'map') get_template_part('layouts/blocks/map/template');
 		else if (get_row_layout() == 'news-slider') get_template_part('layouts/blocks/news-slider/template');
 		else if (get_row_layout() == 'parameters') get_template_part('layouts/blocks/parameters/template');
