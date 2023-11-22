@@ -2,8 +2,8 @@
 	margin-top: 60px;
 	padding-bottom: 30px;
 
-	@include xs {
-		margin-top: 40px;
+	@include md {
+		margin-top: 20px;
 	}
 
 	&__content {
