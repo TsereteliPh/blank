@@ -6,8 +6,12 @@
 		margin-top: 80px;
 	}
 
-	@include xs {
+	@include sm {
 		margin-top: 60px;
+	}
+
+	@include xs {
+		margin-top: 40px;
 	}
 
 	&__controls {

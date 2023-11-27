@@ -10,6 +10,10 @@
 		padding: 60px 0;
 	}
 
+	@include xs {
+		padding: 40px 0;
+	}
+
 	&__title {
 
 		.title__text {
