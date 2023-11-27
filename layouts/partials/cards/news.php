@@ -11,9 +11,11 @@
 		}
 	?>
 
-	<time class="news-card__date" datetime="<?php echo get_the_date('Y-m-j'); ?>"><?php echo get_the_date('j.m.y')?></time>
+	<div class="news-card__content">
+		<time class="news-card__date" datetime="<?php echo get_the_date('Y-m-j'); ?>"><?php echo get_the_date('j.m.y')?></time>
 
-	<a href="<?php the_permalink(); ?>" class="news-card__link"><?php the_title(); ?></a>
+		<a href="<?php the_permalink(); ?>" class="news-card__link"><?php the_title(); ?></a>
 
-	<div class="news-card__text"><?php echo adem_excerpt(150); ?></div>
+		<div class="news-card__text"><?php echo adem_excerpt(150); ?></div>
+	</div>
 </li>

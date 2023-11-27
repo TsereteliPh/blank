@@ -1,24 +1,27 @@
 .news-card {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
 	height: auto;
-	padding: 0 15px 30px;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	box-shadow: 0 5px 20px rgba(#000, 0.2);
 
 	&__img {
-		width: calc(100% + 30px);
-		max-width: none;
-		height: auto;
-		margin-left: -15px;
+		width: 100%;
 		aspect-ratio: 4/3;
 		object-fit: cover;
 	}
 
-	&__date {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		height: 100%;
 		margin-top: 20px;
+		padding: 0 15px 30px;
+	}
+
+	&__date {
 		color: var(--primary);
 		font-weight: 700;
 		font-family: var(--font-secondary);

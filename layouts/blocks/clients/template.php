@@ -25,21 +25,23 @@
 								}
 							?>
 
-							<?php if ( $item['year'] ) : ?>
-								<div class="clients__year"><?php echo $item['year']; ?></div>
-							<?php endif; ?>
+							<div class="clients__content">
+								<?php if ( $item['year'] ) : ?>
+									<div class="clients__year"><?php echo $item['year']; ?></div>
+								<?php endif; ?>
 
-							<?php if ( $item['place'] ) : ?>
-								<div class="clients__place"><?php echo $item['place']; ?></div>
-							<?php endif; ?>
+								<?php if ( $item['place'] ) : ?>
+									<div class="clients__place"><?php echo $item['place']; ?></div>
+								<?php endif; ?>
 
-							<?php if ( $item['label'] ) : ?>
-								<div class="clients__label"><?php echo $item['label']; ?></div>
-							<?php endif; ?>
+								<?php if ( $item['label'] ) : ?>
+									<div class="clients__label"><?php echo $item['label']; ?></div>
+								<?php endif; ?>
 
-							<?php if ( $item['desc'] ) : ?>
-								<div class="clients__desc"><?php echo $item['desc']; ?></div>
-							<?php endif; ?>
+								<?php if ( $item['desc'] ) : ?>
+									<div class="clients__desc"><?php echo $item['desc']; ?></div>
+								<?php endif; ?>
+							</div>
 						</li>
 					<?php endforeach; ?>
 				</ul>
