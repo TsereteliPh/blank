@@ -1,0 +1,53 @@
+.not-found {
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		align-items: center;
+		justify-content: center;
+		min-height: 600px;
+
+		@include hg {
+			min-height: 400px;
+		}
+
+		@include md {
+			gap: 20px;
+			min-height: 500px;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 98px;
+		font-family: var(--font-secondary);
+
+		@include md {
+			font-size: 76px;
+		}
+
+		@include xs {
+			font-size: 64px;
+		}
+	}
+
+	&__text {
+		max-width: max(600px, 80vw);
+		font-size: 24px;
+		line-height: 1.35;
+		text-align: center;
+
+		@include md {
+			font-size: 20px;
+		}
+
+		@include xs {
+			font-size: 18px;
+		}
+
+		a {
+			@include ui-link(var(--primary));
+		}
+	}
+}
