@@ -6,5 +6,9 @@
 
 	.helmet {
 		padding: 0;
+
+		@include sm {
+			padding-top: 40px;
+		}
 	}
 }
