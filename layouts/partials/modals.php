@@ -6,13 +6,13 @@
     }
 ?>
 <div class="modal modal--success" id="success">
-	<h2 class="modal__title">Спасибо!</h2>
+	<div class="modal__title">Спасибо!</div>
 
 	<div class="modal__text">Ваша заявка была успешно отправлена! Мы свяжемся с вами в ближайшее время.</div>
 </div>
 
 <div class="modal" id="callback">
-	<h2 class="modal__title">Заявка на обратную связь</h2>
+	<div class="modal__title">Заявка на обратную связь</div>
 
 	<form method="POST" class="modal__form" name="Звонок">
 		<?php wp_nonce_field( 'Звонок', 'callback_input' ); ?>
