@@ -132,6 +132,17 @@
 		}
 	}
 
+	&__input {
+
+		&--name {
+			grid-column: span 2;
+
+			@include lg {
+				grid-column: auto;
+			}
+		}
+	}
+
 	&__policy {
 		align-self: center;
 	}

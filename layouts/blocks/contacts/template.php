@@ -64,11 +64,13 @@
 			<div class="contacts__form-label">Свяжитесь с нами</div>
 
 			<div class="contacts__form-wrapper">
-				<input type="text" class="input contacts__input" name="client_name" placeholder="ФИО" required>
+				<input type="text" class="input contacts__input contacts__input--name" name="client_name" placeholder="ФИО" required>
+
+				<input type="tel" class="input contacts__input" name="client_tel" placeholder="Телефон" required>
 
 				<input type="email" class="input contacts__input" name="client_email" placeholder="E - mail" required>
 
-				<textarea type="text" class="input contacts__input" name="client_message" placeholder="Текст вопроса" required></textarea>
+				<textarea class="input contacts__input" name="client_message" placeholder="Текст вопроса" required></textarea>
 
 				<label class="policy-check contacts__policy">
 					<input type="checkbox" name="policy" class="policy-check__input" required checked>
@@ -76,7 +78,7 @@
 					<span class="policy-check__text">Нажимая кнопку вы даете согласие на обработку персональных данных в соответствии с <a href="<?php echo get_privacy_policy_url(); ?>" target="_blank">Политикой&nbsp;конфиденциальности</a></span>
 				</label>
 
-				<button class="btn contacts__submit" type="sumbit">Заказать звонок</button>
+				<button class="btn contacts__submit" type="sumbit">Отправить</button>
 			</div>
 		</form>
 	</div>
