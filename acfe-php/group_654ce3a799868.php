@@ -204,6 +204,45 @@ acf_add_local_field_group(array(
 					'acfe_field_group_condition' => 0,
 					'parent_repeater' => 'field_654ce3b56d5c2',
 				),
+				array(
+					'key' => 'field_6576c3748d777',
+					'label' => 'Продукция',
+					'name' => 'products',
+					'aria-label' => '',
+					'type' => 'relationship',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array(
+						0 => 'products',
+					),
+					'post_status' => array(
+						0 => 'publish',
+					),
+					'taxonomy' => '',
+					'filters' => array(
+						0 => 'search',
+					),
+					'return_format' => 'id',
+					'acfe_add_post' => 0,
+					'acfe_edit_post' => 0,
+					'acfe_bidirectional' => array(
+						'acfe_bidirectional_enabled' => '0',
+					),
+					'min' => '',
+					'max' => '',
+					'elements' => '',
+					'acfe_field_group_condition' => 0,
+					'bidirectional' => 0,
+					'bidirectional_target' => array(
+					),
+					'parent_repeater' => 'field_654ce3b56d5c2',
+				),
 			),
 		),
 	),
@@ -232,7 +271,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1699538874,
+	'modified' => 1702282244,
 ));
 
 endif;

@@ -84,6 +84,10 @@
 
 				+ .application__text {
 					text-indent: 70px;
+
+					@include xs {
+						text-indent: 30px;
+					}
 				}
 			}
 		}
@@ -130,6 +134,27 @@
 
 		span {
 			font-weight: 700;
+		}
+	}
+
+	&__products {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 15px;
+
+		@include xs {
+			gap: 5px;
+		}
+	}
+
+	&__product {
+		font-weight: 700;
+		font-size: 20px;
+		@include ui-link(var(--fc-dark));
+
+		@include xs {
+			font-size: 18px;
 		}
 	}
 }

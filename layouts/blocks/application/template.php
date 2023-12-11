@@ -24,7 +24,27 @@
 							?>
 						</button>
 
-						<div class="application__text"><?php echo $item['text']; ?></div>
+						<div class="application__text">
+							<?php
+								if ( $item['text'] ) {
+									echo $item['text'];
+								}
+
+								if ( $item['products'] ) :
+							?>
+								<div class="reset-list application__products">
+									<?php
+										foreach ( $item['products'] as $post ) :
+											setup_postdata( $post );
+									?>
+										<a href="<?php the_permalink(); ?>" class="application__product"><?php the_title(); ?></a>
+									<?php
+											wp_reset_postdata();
+										endforeach;
+									?>
+								</div>
+							<?php endif; ?>
+						</div>
 					</li>
 				<?php endforeach; ?>
 			</ul>
