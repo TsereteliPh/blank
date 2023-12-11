@@ -60,7 +60,7 @@
 	&__map {
 		position: absolute;
 		right: 0;
-		bottom: 0;
+		bottom: 30px;
 		width: 75%;
 		height: auto;
 		aspect-ratio: 37/23;
@@ -103,7 +103,7 @@
 		@include md {
 			flex-direction: row;
 			flex-wrap: wrap;
-			justify-content: center;
+			justify-content: space-between;
 			margin-top: 40px;
 		}
 

@@ -12,13 +12,15 @@
 
 			<li class="geography__item">Санкт-Петербург</li>
 
-			<li class="geography__item">Саратов</li>
+			<li class="geography__item">Казань</li>
 
-			<li class="geography__item">Екатеринбург</li>
+			<li class="geography__item">Новосибирск</li>
 
 			<li class="geography__item">Владивосток</li>
 
-			<li class="geography__item">Салехард</li>
+			<li class="geography__item">Уфа</li>
+
+			<li class="geography__item">Барнаул</li>
 		</ul>
 	</div>
 </section>
