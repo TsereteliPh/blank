@@ -299,7 +299,7 @@
 	&__characteristics {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 60px 120px;
+		gap: 40px 100px;
 		margin: 100px 0 30px;
 		padding: 100px 0;
 		border-top: 1px solid var(--fc-light);
@@ -352,7 +352,7 @@
 		display: grid;
 		grid-column: span 2;
 		grid-template-columns: 1fr 1fr;
-		gap: 20px 120px;
+		gap: 20px 100px;
 
 		@include hg {
 			gap: 20px 80px;
@@ -377,16 +377,11 @@
 		gap: 100px;
 		justify-content: space-between;
 		width: 100%;
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 1.35;
 
 		@include hg {
 			gap: 60px;
-			font-size: 20px;
-		}
-
-		@include sm {
-			font-size: 16px;
 		}
 
 		@include xs {
@@ -416,11 +411,7 @@
 		display: flex;
 		gap: 40px;
 		justify-content: space-between;
-		font-size: 18px;
-
-		@include sm {
-			font-size: 16px;
-		}
+		font-size: 16px;
 
 		@include xs {
 			font-size: 14px;
