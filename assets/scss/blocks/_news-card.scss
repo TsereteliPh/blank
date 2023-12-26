@@ -40,6 +40,7 @@
 	&__text {
 		margin-top: auto;
 		line-height: 1.35;
+		text-align: justify;
 
 		@include xs {
 			font-size: 14px;

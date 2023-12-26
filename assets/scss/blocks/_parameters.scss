@@ -121,6 +121,7 @@
 	&__text {
 		font-size: 14px;
 		line-height: 1.65;
+		text-align: justify;
 
 		@include md {
 			line-height: 1.5;

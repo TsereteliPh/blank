@@ -153,6 +153,7 @@
 	}
 
 	&__item-text {
+		text-align: justify;
 
 		@include xs {
 			font-size: 14px;

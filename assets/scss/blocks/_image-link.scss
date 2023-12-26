@@ -50,6 +50,7 @@
 	&__text {
 		margin-top: 60px;
 		line-height: 1.35;
+		text-align: justify;
 		text-indent: 70px;
 
 		@include hg {
