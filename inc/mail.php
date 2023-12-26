@@ -126,7 +126,7 @@ function send_mail()
 {
 	if (empty($_POST['form_name']) || empty($_POST['page_request'])) exit;
 	if ( $_POST['form_name'] == 'Звонок' && !wp_verify_nonce( $_POST['callback_input'], $_POST['form_name'] ) ) exit;
-	if ( $_POST['form_name'] == 'Рассылка' && !wp_verify_nonce( $_POST['mailing_input'], $_POST['form_name'] ) ) exit;
+	if ( $_POST['form_name'] == 'Консультация' && !wp_verify_nonce( $_POST['mailing_input'], $_POST['form_name'] ) ) exit;
 	if ( $_POST['form_name'] == 'Контакты' && !wp_verify_nonce( $_POST['contact_input'], $_POST['form_name'] ) ) exit;
 
 	$form_name = $_POST['form_name'];
