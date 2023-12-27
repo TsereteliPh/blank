@@ -222,22 +222,16 @@
 		gap: 20px;
 		align-items: center;
 		justify-content: center;
-		width: 305px;
-		height: 305px;
-		margin-left: 250px;
-		padding: 100px 40px;
+		width: 220px;
+		height: 220px;
+		margin: 0 auto 60px;
+		padding: 20px 40px;
 		font-weight: 700;
 		text-align: center;
 		text-decoration: none;
 		background: var(--primary);
 		border-radius: 50%;
 		transition: var(--transition);
-
-		@include hg {
-			width: 250px;
-			height: 250px;
-			padding: 80px 20px;
-		}
 
 		@include lg {
 			width: 200px;
@@ -280,7 +274,7 @@
 
 		svg {
 			position: absolute;
-			bottom: 50px;
+			bottom: 35px;
 			left: 50%;
 			transform: translateX(-50%) rotate(90deg);
 			transition: var(--transition);
