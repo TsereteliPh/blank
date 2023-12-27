@@ -1078,6 +1078,13 @@ acf_add_local_field_group(array(
 				'value' => 'page',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'products',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',
@@ -1102,7 +1109,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1700649289,
+	'modified' => 1703675240,
 ));
 
 endif;

@@ -48,6 +48,28 @@ acf_add_local_field_group(array(
 			'acfe_field_group_condition' => 0,
 		),
 		array(
+			'key' => 'field_658c05fc242ef',
+			'label' => 'Краткое описание (для карточки товара)',
+			'name' => 'small_desc',
+			'aria-label' => '',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'acfe_textarea_code' => 0,
+			'maxlength' => '',
+			'rows' => 3,
+			'placeholder' => '',
+			'new_lines' => '',
+			'acfe_field_group_condition' => 0,
+		),
+		array(
 			'key' => 'field_6559f01205305',
 			'label' => 'Область применения',
 			'name' => 'area',
@@ -606,7 +628,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1700579226,
+	'modified' => 1703675446,
 ));
 
 endif;
