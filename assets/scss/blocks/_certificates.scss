@@ -20,6 +20,11 @@
 		@include xs {
 			gap: 40px;
 		}
+
+		&--flex {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	&__title {
@@ -77,6 +82,21 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+		}
+
+		&--large {
+
+			@include hg {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			.certificates__item {
+				aspect-ratio: 3/2;
+
+				@include lg {
+					aspect-ratio: 1/1;
+				}
+			}
 		}
 	}
 

@@ -1,21 +1,25 @@
+<?php
+	$certificates = get_sub_field( 'certificates' );
+	$text = get_sub_field( 'text' );
+?>
 <section class="certificates">
-	<div class="container certificates__container">
+	<div class="container certificates__container<?php echo $text ? '' : ' certificates__container--flex'; ?>">
 		<div class="certificates__content">
 			<?php get_template_part('/layouts/partials/title', null, array(
 				'class' => 'certificates__title',
 				'title' => get_sub_field('title')
 			)); ?>
 
-			<?php if ( get_sub_field( 'text' ) ) : ?>
-				<div class="certificates__text"><?php the_sub_field( 'text' ); ?></div>
+			<?php if ( $text ) : ?>
+				<div class="certificates__text"><?php echo $text ?></div>
 			<?php endif; ?>
 		</div>
 
 		<?php
-			$certificates = get_sub_field( 'certificates' );
 			if ( $certificates ) :
+				$quantity = count( $certificates );
 		?>
-			<ul class="reset-list certificates__list">
+			<ul class="reset-list certificates__list<?php echo $text ? '' : ' certificates__list--large'; ?>">
 				<?php foreach ( $certificates as $sertificate ) : ?>
 					<li class="certificates__item">
 						<a href="<?php echo $sertificate['certificate']; ?>" class="certificates__link" download>
